@@ -20,16 +20,16 @@
   var option;
 
   option = {
-    xAxis: {
-      type: "category",
-      data: repos.map((r) => r.name),
-    },
     yAxis: {
+      type: "category",
+      data: repos.map((r) => r.name).reverse(),
+    },
+    xAxis: {
       type: "value",
     },
     series: [
       {
-        data: repos.map((r) => r.stars),
+        data: repos.map((r) => r.stars).reverse(),
         type: "bar",
         showBackground: true,
         backgroundStyle: {
