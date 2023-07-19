@@ -1,7 +1,7 @@
 import * as echarts from "./node_modules/echarts/dist/echarts.esm.js";
 
 var chartDom = document.querySelector("div.diagram");
-if (charDom === null) {
+if (chartDom === null) {
   throw new Error("div.diagram not found");
 }
 var myChart = echarts.init(chartDom, "dark");
