@@ -1,5 +1,7 @@
 (async function () {
-  const response = await fetch("./repositories.json");
+  const response = await fetch(
+    "https://api.github.com/search/repositories?q=stars%3A%3E10000+data-visualization&sort=stars&order=desc"
+  );
   const json = await response.json();
 
   const repositories = json.items;
@@ -15,6 +17,15 @@
         "charts",
         "analytics",
         "sampler",
+        "netdata",
+        "pixijs",
+        "metabase",
+        "directus",
+        "awesome-datascience",
+        "Data-Science-For-Beginners",
+        "awesome-creative-coding",
+        "best-of-ml-python",
+        "awesome-bigdata",
       ].includes(repo.name)
   );
 
@@ -28,7 +39,7 @@
   if (chartDom === null) {
     throw new Error("div.diagram not found");
   }
-  var myChart = echarts.init(chartDom, "vintage");
+  var myChart = echarts.init(chartDom, "dark");
   var option = {
     grid: {
       top: 10,
@@ -37,7 +48,7 @@
       right: 30,
     },
     axisLabel: {
-      color: "black",
+      color: "white",
     },
 
     yAxis: {
@@ -59,7 +70,7 @@
           show: true,
           precision: 1,
           position: "right",
-          color: "black",
+          color: "white",
           Fontweight: "bold",
           fontFamily: "monospace",
         },
