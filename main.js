@@ -55,6 +55,14 @@
         backgroundStyle: {
           color: "rgba(180, 180, 180, 0.2)",
         },
+        label: {
+          show: true,
+          precision: 1,
+          position: "right",
+          color: "black",
+          Fontweight: "bold",
+          fontFamily: "monospace",
+        },
       },
     ],
   };
